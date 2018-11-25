@@ -72,6 +72,7 @@ names(summary(fit1))
 summary(fit1)$r.squared
 coef(fit1)[2]  # slope or beta
 fitted(fit1)
+predict(fit1,newdata=data.frame(X)) #gives same values as fitted function
 #combine the data with Ypredicted, errors
 cbind(df, fitted(fit1), fitted(fit1)- df$Y, residuals(fit1))
 
@@ -83,6 +84,7 @@ summary(fit1)
 coef(fit1)
 (Y = coef(fit1)[1] + coef(fit1)[2] * 4)
 #using model
+range(df$X)
 (new1 = data.frame(X=c(4,5,3,2)))
 predict(fit1, newdata= new1)
 
@@ -95,7 +97,7 @@ range(df$X)  #min to max value of X: area
 predict(fit1, newdata= new1) # Predict Function for 4 values of X
 #columnbind with input and predicted values
 cbind(new1, predictedY = predict(fit1, newdata= new1) )
-
+install.packages("forecast")
 library(forecast) #install it first
 ?accuracy(fit1)
 #RMSE is generally used and should be least when selecting models
@@ -107,6 +109,7 @@ summary(fit1)$sigma  #Residual Std Error SD along the LM Line
 #---------------------------------------#Assumptions--------
 #Assumption : Graphical Analysis : IMP STEP
 plot(fit1)
+
 par(mfrow=c(2,2))
 plot(fit1)
 par(mfrow=c(1,1))

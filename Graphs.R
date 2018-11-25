@@ -16,7 +16,7 @@ title(main='Main Title', sub='Sub Title')
 #see cheat sheet on base graphs
 
 plot(women)
-abline(lm(women$weight ~ women$height), col='red', lty=2, lwd=4)
+abline(lm(women$weight ~ women$height), col='red', lty=2, lwd=4) #best fit line
 
 (plot(x=mtcars$wt, y=mtcars$mpg, col=mtcars$gear,cex=mtcars$cyl))
 
@@ -32,7 +32,7 @@ quantile(women$height, seq(0,1,.01))
 stem(women$height)
 boxplot(women$height, col='green')
 abline(h=quantile(women$height))
-text(1+.2, quantile(women$height), labels=c('min','1Q','median','3Q','max'))
+text(1+.3, quantile(women$height), labels=c('min','1Q','median','3Q','max'))
 
 #histogram
 hist(women$height)
@@ -58,7 +58,8 @@ pie(x)
 xlabels = c('A','B','C','D')
 x/sum(x)
 (labels2 = paste(xlabels, round(x/sum(x),2) * 100 , sep='-'))
-pie(x, labels=labels2)
+labels3=paste(xlabels, round(x/sum(x),2)*100, '%')
+pie(x, labels=labels3)
 x
 #barplot
 barplot(x,col=1:4)
