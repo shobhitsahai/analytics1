@@ -41,6 +41,7 @@ summary(fit2)$adj.r.squared  # Adjt R2 here > .6
 
 #coefficients b1, b2
 coef(fit2)
+
 summary(fit2)
 #price  : -53 , pvalue = 9.2e-09 < 0.05 *** : Significant
 #keeping promotion constant, if price is increased by 1 unit, salesqty decreases by 53 units
@@ -64,7 +65,6 @@ cbind(ndata2, p2sales)
 par(mfrow=c(2,2))
 plot(fit2)
 par(mfrow=c(1,1))
-
 plot(fit2,which=1)  # no pattern, equal variance
 plot(fit2,2)  # Residuals are normally distributed
 plot(fit2,3)  # No hetero-scedascity
@@ -83,7 +83,7 @@ summary(fit3)
 #Dataset can be divided into train(70%) and test(30%) set to check the accuracy
 
 #create model with t
-
+install.packages("olsrr")
 
 
 
