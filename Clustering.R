@@ -23,7 +23,7 @@ marks %>% mutate(cluster = km12$cluster) %>% group_by(cluster) %>%  summarise(me
 
 #Distances
 km12$withinss
-km12$tot.withinss
+km12$tot.withinss # sum of withinss
 km12$betweenss
 km12$tot.withinss + km12$betweenss
 km12$totss
