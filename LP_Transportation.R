@@ -1,6 +1,7 @@
 # LP - Transportation Problem 
 #https://docs.google.com/spreadsheets/d/1G6-iPDoD_i4THQAHwBeOLeiTfuqn7a6Q7MrOg9v1C5U/edit#gid=166724984
 #https://cran.r-project.org/web/packages/lpSolve/lpSolve.pdf
+install.packages("lpSolve")
 library(lpSolve)
 
 (costs <- matrix (c(3,1,5,2,5,4),ncol=2))

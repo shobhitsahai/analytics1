@@ -50,6 +50,7 @@ arrange(df1,desc(marks)) %>%select(sname, marks)
 
 df1 %>% arrange(marks) %>% select(sname, marks)
 df1[(order(df1$marks, decreasing=T)), c('sname','marks')]  # conventional way
+<<<<<<< HEAD
 mean(df1$marks,rnum=T)
 df1 %>%sample_n(3) # to select random three records
 df1 %>% sample_frac(.3) # to select random fraction data
@@ -61,6 +62,11 @@ df2=df1[complete.cases(df1),]
 df2
 sum(is.na(df1))
 sum(is.na(df2))    
+=======
+
+df1 %>%sample_n(3) # to select random three records
+df1 %>% sample_frac(.3) # to select random fraction data
+>>>>>>> 6edfbd0e286c7691a7457d4e68f6297a18f1aedd
 
 #read to read from excel file
 df=read.csv(file.choose())
