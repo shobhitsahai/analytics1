@@ -45,7 +45,7 @@ inspect (rulesl[1:5])
 
 #How To Control The Number Of Rules in Output ?
 #maxlen, minlen, supp, conf
-rules2 = apriori (Groceries, parameter = list (supp = 0.01, conf = 0.5, minlen=2, maxlen=3)) 
+rules2 = apriori (Groceries, parameter = list (supp = 0.001, conf = 0.5, minlen=2, maxlen=3)) 
 inspect(rules2[1:15])
 
 #Find what factors influenced an event ‘X’
